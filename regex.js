@@ -199,3 +199,19 @@ function loadSampleData() {
     // Auto-extract after loading sample
     setTimeout(performExtraction, 100);
 }
+
+// Clear all data function
+function clearAllData() {
+    inputText.value = '';
+    resultsSection.style.display = 'none';
+    summaryStats.innerHTML = '';
+    patternResults.innerHTML = '';
+    inputText.focus();
+}
+
+// Utility function to escape HTML
+function escapeHTML(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}

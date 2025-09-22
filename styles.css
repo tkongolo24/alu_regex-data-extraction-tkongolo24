@@ -270,3 +270,48 @@ button {
     word-break: break-all;
     line-height: 1.4;
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .app-header {
+        padding: 20px 15px;
+    }
+    
+    .app-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .input-section,
+    .results-section {
+        padding: 20px;
+    }
+    
+    .control-buttons {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    .pattern-results {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .summary-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 1.5em;
+    }
+}

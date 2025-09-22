@@ -66,3 +66,24 @@ body {
 .input-container {
     margin-bottom: 20px;
 }
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+    line-height: 1.5;
+    resize: vertical;
+    min-height: 180px;
+    background-color: #fdfdfd;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    background-color: white;
+}

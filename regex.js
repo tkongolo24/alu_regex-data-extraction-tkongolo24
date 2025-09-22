@@ -125,3 +125,60 @@ function performExtraction() {
         totalPatterns: Object.keys(dataPatterns).length
     });
 }
+
+/ Display results function
+function displayExtractionResults(results, stats) {
+    // Show results section
+    resultsSection.style.display = 'block';
+    
+    // Update summary statistics
+    summaryStats.innerHTML = `
+        <div class="stat-item">
+            <span class="stat-number">${stats.totalMatches}</span>
+            <span class="stat-label">Total Matches</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">${stats.patternsWithMatches}</span>
+            <span class="stat-label">Patterns Found</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">${stats.textLength}</span>
+            <span class="stat-label">Characters</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">${stats.totalPatterns}</span>
+            <span class="stat-label">Patterns Searched</span>
+        </div>
+    `;
+
+    
+    // Generate pattern result cards
+    let resultsHTML = '';
+    
+    Object.keys(results).forEach(key => {
+        const result = results[key];
+        const hasMatches = result.uniqueCount > 0;
+        
+        const matchesHTML = hasMatches 
+            ? result.matches.map(match => 
+                `<div class="match-item">${escapeHTML(match)}</div>`
+              ).join('')
+            : '<div class="no-matches">No matches found</div>';
+
+        resultsHTML += `
+            <div class="pattern-card">
+                <div class="pattern-header">
+                    <span class="pattern-title">${result.icon} ${result.name}</span>
+                    <span class="match-count">${result.uniqueCount}</span>
+                </div>
+                <div class="pattern-body">
+                    <div class="matches-list">
+                        ${matchesHTML}
+                    </div>
+                    <div class="regex-info">
+                        <div class="regex-pattern">RegEx: ${result.regex.toString()}</div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });

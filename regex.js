@@ -226,4 +226,13 @@ document.addEventListener('DOMContentLoaded', function() {
         "Example: Visit https://example.com for pricing at $29.99",
         "Sample: Meeting at 2:30 PM, payment via 1234-5678-9012-3456"
     ];
+    let currentExample = 0;
     
+    // Rotate placeholder examples every few seconds
+    setInterval(() => {
+        if (inputText.value === '' && document.activeElement !== inputText) {
+            inputText.placeholder = placeholderExamples[currentExample];
+            currentExample = (currentExample + 1) % placeholderExamples.length;
+        }
+    }, 3000);
+});

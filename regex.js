@@ -182,3 +182,20 @@ function displayExtractionResults(results, stats) {
             </div>
         `;
     });
+    patternResults.innerHTML = resultsHTML;
+    
+    // Smooth scroll to results
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Load sample data function
+function loadSampleData() {
+    const samples = Object.keys(testData);
+    const randomSample = samples[Math.floor(Math.random() * samples.length)];
+    
+    inputText.value = testData[randomSample];
+    inputText.focus();
+    
+    // Auto-extract after loading sample
+    setTimeout(performExtraction, 100);
+}

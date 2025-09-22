@@ -116,3 +116,12 @@ function performExtraction() {
             patternsWithMatches++;
         }
     });
+    
+     // Display the results
+    displayExtractionResults(results, {
+        totalMatches,
+        patternsWithMatches,
+        textLength: textInput.length,
+        totalPatterns: Object.keys(dataPatterns).length
+    });
+}

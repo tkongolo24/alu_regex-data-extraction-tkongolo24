@@ -126,7 +126,7 @@ function performExtraction() {
     });
 }
 
-/ Display results function
+// Display results function
 function displayExtractionResults(results, stats) {
     // Show results section
     resultsSection.style.display = 'block';

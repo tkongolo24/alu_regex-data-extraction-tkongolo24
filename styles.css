@@ -183,3 +183,90 @@ button {
     color: #6c757d;
     font-weight: 500;
 }
+
+.pattern-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.pattern-card {
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    background: white;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.pattern-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.pattern-header {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pattern-title {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #1a1f36;
+}
+
+.match-count {
+    background-color: #4a90e2;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.85em;
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+}
+
+.pattern-body {
+    padding: 20px;
+}
+
+.matches-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.match-item {
+    background-color: #f8fafe;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+    font-size: 13px;
+    color: #2f3349;
+    border-left: 3px solid #4a90e2;
+    word-break: break-all;
+}
+
+.no-matches {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    padding: 30px 20px;
+}
+
+.regex-info {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #2f3349;
+    border-radius: 4px;
+}
+
+.regex-pattern {
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+    font-size: 11px;
+    color: #a8b2d1;
+    word-break: break-all;
+    line-height: 1.4;
+}

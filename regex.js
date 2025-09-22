@@ -60,3 +60,24 @@ Revenue: $45,678.90 this quarter, $123,456.78 projected
 Campaign hashtags: #Q3Results #BusinessGrowth #Innovation
 Customer service: info@support.net available 24/7`
 };
+
+// DOM Elements
+const inputText = document.getElementById('inputText');
+const extractBtn = document.getElementById('extractBtn');
+const sampleBtn = document.getElementById('sampleBtn');
+const clearBtn = document.getElementById('clearBtn');
+const resultsSection = document.getElementById('results-section');
+const summaryStats = document.getElementById('summary-stats');
+const patternResults = document.getElementById('pattern-results');
+
+// Event Listeners
+extractBtn.addEventListener('click', performExtraction);
+sampleBtn.addEventListener('click', loadSampleData);
+clearBtn.addEventListener('click', clearAllData);
+
+// Keyboard shortcuts
+inputText.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key === 'Enter') {
+        performExtraction();
+    }
+});

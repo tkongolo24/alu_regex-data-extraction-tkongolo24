@@ -81,3 +81,38 @@ inputText.addEventListener('keydown', function(e) {
         performExtraction();
     }
 });
+
+// Main extraction function
+function performExtraction() {
+    const textInput = inputText.value.trim();
+    
+    if (!textInput) {
+        alert('Please enter some text to analyze');
+        inputText.focus();
+        return;
+    }
+
+    const results = {};
+    let totalMatches = 0;
+    let patternsWithMatches = 0;
+
+    // Process each pattern
+    Object.keys(dataPatterns).forEach(patternKey => {
+        const pattern = dataPatterns[patternKey];
+        const matches = textInput.match(pattern.regex) || [];
+        
+        // Remove duplicate matches
+        const uniqueMatches = [...new Set(matches)];
+        
+        results[patternKey] = {
+            ...pattern,
+            matches: uniqueMatches,
+            totalFound: matches.length,
+            uniqueCount: uniqueMatches.length
+        };
+        
+        totalMatches += matches.length;
+        if (matches.length > 0) {
+            patternsWithMatches++;
+        }
+    });

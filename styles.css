@@ -87,3 +87,54 @@ textarea:focus {
     box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
     background-color: white;
 }
+
+.control-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.primary-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: 2px solid #4a90e2;
+}
+
+.primary-btn:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background-color: white;
+    color: #4a90e2;
+    border: 2px solid #4a90e2;
+}
+
+.secondary-btn:hover {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.tertiary-btn {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 2px solid #dee2e6;
+}
+
+.tertiary-btn:hover {
+    background-color: #e9ecef;
+    color: #495057;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pattern Extractor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Data Pattern Extractor</h1>
+            <p>Extract structured data from unstructured text using pattern matching</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section">
+                <h2>Text Input</h2>
+                <div class="input-container">
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Enter your text data here for pattern extraction..."
+                        rows="8"
+                    ></textarea>
+                </div>
+                
+                <div class="control-buttons">
+                    <button id="extractBtn" class="primary-btn">Extract Patterns</button>
+                    <button id="sampleBtn" class="secondary-btn">Load Test Data</button>
+                    <button id="clearBtn" class="tertiary-btn">Clear</button>
+                </div>
+            </section>
+
+            <section id="results-section" class="results-section" style="display: none;">
+                <h2>Extraction Results</h2>
+                <div id="summary-stats" class="summary-stats"></div>
+                <div id="pattern-results" class="pattern-results"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="regex.js"></script>
+</body>
+</html>

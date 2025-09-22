@@ -215,3 +215,15 @@ function escapeHTML(text) {
     div.textContent = text;
     return div.innerHTML;
 }
+
+// Auto-focus on text area when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    inputText.focus();
+    
+    // Add some helpful placeholder examples
+    const placeholderExamples = [
+        "Try typing: Contact us at info@company.com or call (555) 123-4567",
+        "Example: Visit https://example.com for pricing at $29.99",
+        "Sample: Meeting at 2:30 PM, payment via 1234-5678-9012-3456"
+    ];
+    

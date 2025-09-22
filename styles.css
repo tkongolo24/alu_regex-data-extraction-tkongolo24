@@ -41,3 +41,28 @@ body {
     color: #6c757d;
     font-weight: 400;
 }
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input-section {
+    background: white;
+    padding: 30px;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.input-section h2 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1a1f36;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}

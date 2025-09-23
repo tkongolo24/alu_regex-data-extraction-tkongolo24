@@ -61,6 +61,3 @@ Meeting at 2:30 PM tomorrow #ImportantMeeting
 - HTML5, CSS3, JavaScript
 - Regular Expressions for pattern matching
 - Responsive web design
-
----
-*ALU Full Stack Development Assignment*
